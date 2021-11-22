@@ -20,15 +20,16 @@ def load_files(album_directory):
 
     for file in directory_files:
         print(file)
-        album_files.append(music_tag.load_file(file))
+        print(join(album_directory, file))
+        album_files.append(music_tag.load_file(join(album_directory, file)))
 
-    album_files
+    return album_files
 
 def main():
     runtime_info = arg_setup()
     album_files = load_files(runtime_info['album_directory'])
 
     for file in album_files:
-        print(file.length)
+        print(file)        
 
 main()
