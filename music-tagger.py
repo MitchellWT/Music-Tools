@@ -73,11 +73,9 @@ def set_metadata(album_directory, album_files, release_list):
                 )
             )
 
-def main():
+if __name__ == '__main__':
     runtime_info = arg_setup()
     album_files = load_files(runtime_info['album_directory'])
     release_list = get_metadata(runtime_info['mb_disc_id'])
     release_list = release_list[0]
     set_metadata(runtime_info['album_directory'], album_files, release_list)
-
-main()
