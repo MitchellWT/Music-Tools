@@ -13,7 +13,7 @@ def arg_setup():
     runtime_args = parser.parse_args()
     runtime_info = {
         'album_directory': runtime_args.album_directory,
-        'mb_disc_id' :     runtime_args.mb_disc_id,
+        'mb_disc_id':      runtime_args.mb_disc_id,
         'album_rip':       runtime_args.album_rip
     }
 
